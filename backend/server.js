@@ -2,7 +2,7 @@ const express = require ("express")
 const app = express()
 const dotenv = require('dotenv')
 dotenv.config()
-const port = process.env.PORT || 8080
+const port = process.env.PORT
 
 const cors = require('cors')
 const db = require('./DB/db')
@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 // CORS
 const corsOptions = {
-    origin: 'http://127.0.0.1:3000' || 'http://localhost:3000',
+    origin:'http://localhost:3000',
     credentials:true,
     optionSuccessStatus:200
 }
