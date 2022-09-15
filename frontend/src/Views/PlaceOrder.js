@@ -79,9 +79,9 @@ function PlaceOrder() {
                         <input type="text" name="state" placeholder="State/Province" value={"Rajasthan"} readOnly required />
                         <input type="text" name="pincode" placeholder="Pincode" maxLength={6} minLength={6} onChange={handleInput} value={address.pincode} required/>
                     </div>
-<div className="grocify-button-container">
-                <button className="grocify-button grocify-button-success continue-btn" onClick={continueBtn}><span>CONTINUE</span></button>
-            </div>
+                    <div className="grocify-button-container">
+                        <button className="grocify-button grocify-button-success continue-btn" onClick={continueBtn}><span>CONTINUE</span></button>
+                    </div>
                 </form>
             </div>
             
