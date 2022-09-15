@@ -1,0 +1,57 @@
+.category-tab {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.slick-slide>div {
+    margin: 0 1.6rem 0 0;
+}
+
+.slick-prev::before, .slick-next::before{
+    font-size: 1.6rem;
+    color: var(--main-color); 
+}
+
+.category-items {
+    margin: 0.8rem;
+    padding: 0.4rem;
+    width: 8rem;
+    height: 10rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    box-shadow: 0 8px 6px -6px var(--shadow-color);
+    background-color: var(--card-color);
+    transition: outline 3sec ease 0s;
+}
+
+.category-image {
+    width: inherit;
+    height: auto;
+    object-fit: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-image-name {
+    overflow: hidden;
+    height: 3.3rem;
+    margin-top: auto;
+    padding: 7px 10px;
+    line-height: 1rem;
+    font-size: 0.9rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-items:hover{
+    outline: 4px solid var(--button-primary-color);
+}
+
+.active{
+    outline: 4px solid var(--main-color);
+}
