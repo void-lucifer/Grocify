@@ -54,7 +54,7 @@ function PlaceOrder() {
                         <br />
                         <span>12:00 PM - 03:30 PM</span>
                     </div>
-                    <div className="slot-card heading grocify-button-primary text-center" id="evening" onClick={() => selectSlot("evening")}>
+                    <div className="slot-card heading grocify-button-primary text-center active" id="evening" onClick={() => selectSlot("evening")}>
                         <span>Evening</span>
                         <br />
                         <span>04:00 PM - 07:30 PM</span>
