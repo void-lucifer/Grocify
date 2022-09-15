@@ -10,7 +10,7 @@ function PlaceOrder() {
     const navigate = useNavigate()
 
     // slot function
-    const [selectedSlot, setSelectedSlot] = useState({"morning": false, "noon":false, "evening":false})
+    const [selectedSlot, setSelectedSlot] = useState({"morning": false, "noon":false, "evening":true})
     const selectSlot = (element) => {
         const slot = document.querySelector(`#${element}`)
         if (slot.classList.contains("active")) {
@@ -60,7 +60,7 @@ function PlaceOrder() {
                         <span>04:00 PM - 07:30 PM</span>
                     </div>
                 </div>
-                <div className="text-center heading" style={{ marginTop: "1rem" }}>*You can select multiple delivery slots.<br />Delivery will be made within 12hrs. of order.</div>
+                <div className="text-center heading" style={{ marginTop: "1rem" }}>*You can select multiple delivery slots.<br />If none selected then Evening slot will be considered by default.<br />Delivery will be made within 12hrs. of order.</div>
             </div>
             <hr align="center" width='80%' style={{ background: 'var(--main-color)', margin: "0 auto" }} />
             <div className="address-details">
