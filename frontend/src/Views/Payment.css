@@ -1,0 +1,44 @@
+.payment-page{
+    margin: 1.6ch auto;
+    padding: 1rem 1.5rem;
+    min-height: 66vh;
+    text-align: center;
+}
+
+.order-summary{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bill-address, .bill-items{
+    margin: 2rem auto 1rem auto;
+    width: 40rem;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    outline: 1px solid var(--secondary-color);
+}
+td, th{
+    text-align: left;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--secondary-color);
+}
+.payment-btn{
+    width: 16rem;
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+}
+
+.payment-msg{
+    margin: 3rem 1rem;
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: 1rem;
+}
+.success-sign{
+    background: var(--success-button);
+    fill: white;
+}
+.success-sign> svg{
+    width: 1.5rem;
+}

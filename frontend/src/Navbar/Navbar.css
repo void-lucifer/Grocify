@@ -1,0 +1,224 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap'); */
+
+.navbar {
+    background-color: var(--nav-color);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8ch 0;
+    position: sticky;
+    top: 0;
+    box-shadow: var(--grocify-shadow);
+    z-index: 2;
+    transition: border-radius 0.2s linear;
+}
+
+.border-radius-top-3 {
+    border-radius: 3ch 3ch 0 0;
+}
+
+.logo {
+    color: var(--main-color);
+    margin: 0.8rem 1rem 0.8rem 2rem;
+    font-family: 'Omegle';
+    font-size: 2.4rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.login-btn {
+    margin-right: 3rem;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-info {
+    margin: 0.5rem 2rem 0.5rem 1.5rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.user-info>a>svg {
+    fill: var(--main-color);
+    margin-top: 5px;
+    width: calc(100% - 0.6rem);
+    height: calc(100% - 0.6rem);
+}
+
+.cart {
+    cursor: pointer;
+    margin: 0.5rem 1.5rem;
+}
+
+.cart>svg {
+    margin-top: 10px;
+    width: 1.8rem;
+    fill: var(--main-color)
+}
+
+.cart-badge {
+    background-color: red;
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.3rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    position: absolute;
+    top: 20px;
+    right: 120px;
+    min-width: 1.5rem;
+    width: fit-content;
+}
+
+.search-icon-small {
+    display: none;
+    cursor: pointer;
+    margin: 0.5rem 1.5rem;
+}
+
+.search-icon-small svg {
+    margin-top: 10px;
+    width: 1.8rem;
+    fill: var(--main-color)
+}
+
+.search-group {
+    display: none;
+    flex-direction: row;
+    flex-shrink: 1;
+    flex-wrap: nowrap;
+    width: 30rem;
+    margin: 0.5rem 2rem;
+}
+
+.search-icon svg {
+    width: 1.5rem;
+    transform: translate(-2.5rem, 0.7rem);
+    fill: var(--secondary-color);
+}
+
+.search-bar {
+    width: inherit;
+}
+
+.search-bar input[type=text] {
+    width: inherit;
+    padding: .5rem 3rem .5rem 1rem;
+    outline: none;
+    border: none;
+    font-size: 1.3rem;
+    border: 3px solid var(--secondary-color);
+    border-radius: 1rem;
+}
+
+.animate-character {
+    background-image: linear-gradient(-225deg,
+            rgb(5, 59, 93) 0%,
+            rgb(36, 77, 97) 10%,
+            rgb(86, 137, 192) 30%,
+            rgb(36, 77, 97) 60%,
+            rgb(67,67,191)90%,
+            rgb(5, 59, 93) 100%            
+            );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 3s linear infinite;
+    display: inline-block;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.dropdown {
+    background-color: var(--button-primary-color);
+    position: relative;
+    top: -0.2rem;
+    left: -8rem;
+    width: 12.5rem;
+    border-radius: 0.5rem;
+    font-family: 'Poppins', 'sans-serif';
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    box-shadow: var(--grocify-shadow);
+
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    transform: translateX(2rem);
+    clip-path: polygon(70% 0%, 75% 10%, 100% 10%, 100% 100%, 0 100%, 0 10%, 65% 10%);
+    transition: all 0.5s ease 0s, visibility 0s linear 0.5s, z-index 0s linear 0.5s;
+}
+.drop-menu:hover .dropdown{
+    visibility: visible;
+    opacity: 1;
+    z-index: 3;
+    transform: translateX(0);
+    transition-delay: 0s, 0s, 0.5s;
+
+}
+
+.dropdown li {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+.dropdown-uname {
+    cursor: default;
+    width: inherit;
+    margin-top: 0.7rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.dropdown-logout:hover {
+    background: var(--button-remove-color);
+    fill: white;
+    color: white;
+}
+
+.dropdown-uname svg, .dropdown-logout svg{
+    width: 1rem;
+    transform: translateY(2px);
+}
+
+.dropdown-logout svg{
+    transform: scale(1.5,1.5);
+}
+
+#click-to-top{
+    display: none;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.5rem;
+    background-color: var(--main-color);
+    border-radius: 0.5rem;
+    fill: white;
+    position:fixed;
+    bottom: 75px;
+    right: 75px;
+}
+
+#click-to-top>svg{
+    width: 2rem;
+    height: 2rem
+}
