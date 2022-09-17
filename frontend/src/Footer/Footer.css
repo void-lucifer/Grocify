@@ -41,6 +41,7 @@ footer{
     margin-left: 0.3rem;
     font-size: 2rem;
     font-family: 'Omegle';
+    transform: translateY(5px);
 }
 
 .footer-links{
