@@ -14,14 +14,14 @@ function Payment() {
     const deliverySlot = JSON.parse(localStorage.getItem('deliverySlot'))
 
     // payment using stripe
-    const stripe = loadStripe("pk_test_51LgYSySI0mdREWu1HRblcZT9pfPVCxjcz10DBYeCz8PgV3UJvIS6IJA7gGMjci0783nyHaMi0JXpIY4Qj3BYMBmK002Xhzx0UK")
     const proceedToPay = async (u_id) => {
         try {
             document.getElementById("pay").classList.remove("continue-btn")
             document.getElementById("pay-btn").innerText = "Processing"
             const sessionCheckout = await axios(base_url + `/order/checkout/${u_id}`)
-            console.log(sessionCheckout.data.session.url)
+            
             // create checkout
+            const stripe = await loadStripe("pk_test_51LgYSySI0mdREWu1HRblcZT9pfPVCxjcz10DBYeCz8PgV3UJvIS6IJA7gGMjci0783nyHaMi0JXpIY4Qj3BYMBmK002Xhzx0UK")
             await stripe.redirectToCheckout({sessionId: sessionCheckout.data.session.id})
         } catch (err) {
            console.log("Error: ", err)
