@@ -1,0 +1,156 @@
+.cart-page {
+    margin: 1.6ch auto;
+    min-height: 66vh;
+    width: 80vw;
+    height: auto;
+}
+
+.cart-message {
+    /* text-align: center; */
+    margin-top: 3rem;
+}
+
+.sub-text {
+    margin: 1rem 0 2rem 0;
+}
+
+.explore {
+    display: flex;
+}
+
+.explore-button {
+    cursor: pointer;
+    margin: 0 auto;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.5rem;
+    outline: none;
+    border: none;
+}
+
+.explore-button span {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.cart-container {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    /* display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap; */
+    margin-top: 1rem;
+    padding: 1rem 1rem;
+}
+
+.cart-card {
+    flex: 2 1 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1.6rem;
+    height: 8rem;
+    box-shadow: var(--grocify-shadow);
+    background-color: var(--card-color);
+}
+
+.cart-item-image img {
+    width: 6rem;
+    height: 6rem;
+    object-fit: contain;
+}
+
+.cart-item-details {
+    margin: 0 2rem;
+    font-size: 1.3rem;
+    width: calc(100% - 10rem);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.cart-item-name {
+    min-height: 3.5rem;
+    height: 3.5rem;
+    overflow: hidden;
+}
+
+.cart-item-name:hover, .cart-card:hover {
+    height: auto;
+}
+
+.cart-item-price {
+    margin-top: 0.5rem;
+}
+
+.remove-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    height: 6rem;
+}
+
+.item-remove-button{
+    cursor:pointer;
+    margin: 0 auto;
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    outline: none;
+    border: none
+}
+
+.item-remove-button > svg {
+    width: 1rem;
+}
+
+.bill-details-container {
+    margin: 1rem;
+    padding: 1rem;
+    min-width: 22.5rem;
+    width: auto;
+    height:fit-content;
+    border-radius: 1.6rem;
+    box-shadow: var(--grocify-shadow);
+    background-color: var(--card-color);
+    position: sticky;
+    top: 6rem;
+}
+
+.receipt{
+    margin-bottom: 1rem;
+    border-bottom: 2px solid black;
+}
+
+
+.bill-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.bill-calculation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    font-size: 1.1rem;
+}
+.bill-calculation, .free-delivery, .place-order-btn-container{
+    margin: 0.3rem 0;
+    width: 90%;
+}
+
+.place-order-btn{
+    width: 100%;
+    font-size: 1rem;
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+}

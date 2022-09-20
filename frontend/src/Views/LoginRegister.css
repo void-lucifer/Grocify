@@ -1,0 +1,66 @@
+.login-page,
+.register-page {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 1rem;
+}
+
+.form-fill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 25rem;
+    height: auto;
+    border: 2px solid var(--button-primary-click);
+    border-radius: 2rem;
+    margin: 1rem;
+    padding: 1rem;
+    
+}
+
+.form-heading {
+    margin: 1.5rem 0 1rem 0;
+    font-size: 2rem;
+    text-align: left;
+    color: var(--secondary-color);
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 3rem);
+}
+
+.form-group input {
+    margin: 0.5rem 0;
+    padding: .5rem 1rem;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    border: 3px solid var(--button-primary-hover);
+    border-radius: 0.6rem;
+}
+
+.account-present {
+    width: calc(100% - 3rem);
+}
+
+.account-present span {
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+.login-register-btn button{
+    margin: 1.2rem 0;
+    padding: 0.6rem 3rem;
+}
+
+.login-register-btn span{
+    font-size: 1.2rem;
+}
