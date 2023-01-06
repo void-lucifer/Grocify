@@ -15,8 +15,8 @@ exports.getCheckout = async (req, res, next) => {
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
     mode: 'payment',
-    success_url: `https://projectgrocify.herokuapp.com/payment-success`,
-    cancel_url: `https://projectgrocify.herokuapp.com/payment-failed`,
+    success_url: `https://localhost:3000/payment-success`,
+    cancel_url: `https://localhost:3000/payment-failed`,
     customer_email: order.email, 
     client_reference_id: order._id,
 
