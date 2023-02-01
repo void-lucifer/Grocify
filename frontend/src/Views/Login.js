@@ -44,16 +44,20 @@ function Login() {
         }
     }, [msg, err])
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <>
             <div className="login-page">
                 <form className="form-fill" onSubmit={handleLogin}>
                     <h2 className="form-heading heading">Login Now</h2>
                     <div className="form-group">
-                        <input type="email" name="email" className="" value={data.email} placeholder="Email" onChange={handleInput} required/>
+                        <input type="email" name="email" className="" value={data.email} placeholder="Email" onChange={handleInput} required />
                     </div>
                     <div className="form-group">
-                        <input type="password" name="password" className="" value={data.password} placeholder="Password" onChange={handleInput} required/>
+                        <input type="password" name="password" className="" value={data.password} placeholder="Password" onChange={handleInput} required />
                     </div>
                     <div className="account-present"><h5>Don't have an account? <span onClick={() => { navigate('/register') }}> Register</span></h5></div>
                     <div className="grocify-button-container login-register-btn">

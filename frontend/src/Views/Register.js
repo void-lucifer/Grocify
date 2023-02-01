@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from "react-redux"
 import { registerAction } from "../Actions/Actions"
 import { cleanAuth } from '../Actions/ActionCreators'
-import { ToastContainer, toast } from 'react-toastify'
+import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 function Register() {
@@ -28,7 +28,7 @@ function Register() {
     const handleRegister = (e) => {
         e.preventDefault()
         dispatch(registerAction(data))
-        setData({...data, ['name'] : "", ['email'] : "", ['password'] : ""})
+        setData({ ...data, ['name']: "", ['email']: "", ['password']: "" })
     }
 
     useEffect(() => {
@@ -47,8 +47,12 @@ function Register() {
         }
 
     }, [msg])
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    })
+
     return (
-        <>
         <div className="register-page">
             <form className="form-fill" onSubmit={handleRegister}>
                 <h2 className="form-heading heading">Register Here</h2>
@@ -71,17 +75,6 @@ function Register() {
                 </div>
             </form>
         </div>
-        <ToastContainer
-                position="top-right"
-                autoClose={1000}
-                hideProgressBar
-                newestOnTop
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss={false}
-                draggable
-                pauseOnHover={false} />
-        </>
     )
 
 }

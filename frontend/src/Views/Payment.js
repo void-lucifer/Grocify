@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Payment.css"
 import { base_url } from "../Actions/config"
 import { useSelector } from 'react-redux'
@@ -19,17 +19,20 @@ function Payment() {
             document.getElementById("pay").classList.remove("continue-btn")
             document.getElementById("pay-btn").innerText = "Processing"
             const sessionCheckout = await axios(base_url + `/order/checkout/${u_id}`)
-            
+
             // create checkout
             const stripe = await loadStripe("pk_test_51LgYSySI0mdREWu1HRblcZT9pfPVCxjcz10DBYeCz8PgV3UJvIS6IJA7gGMjci0783nyHaMi0JXpIY4Qj3BYMBmK002Xhzx0UK")
-            await stripe.redirectToCheckout({sessionId: sessionCheckout.data.session.id})
+            await stripe.redirectToCheckout({ sessionId: sessionCheckout.data.session.id })
         } catch (err) {
-           console.log("Error: ", err)
+            console.log("Error: ", err)
         }
         document.getElementById("pay-btn").innerText = "Proceed to Pay"
         document.getElementById("pay").classList.add("continue-btn")
     }
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    })
     return (
         <div className="payment-page">
             <div className="order-summary">

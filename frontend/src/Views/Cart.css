@@ -80,7 +80,7 @@
     overflow: hidden;
 }
 
-.cart-item-name:hover, .cart-card:hover {
+.cart-item-name:hover{
     height: auto;
 }
 

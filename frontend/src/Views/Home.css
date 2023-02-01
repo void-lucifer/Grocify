@@ -3,16 +3,56 @@
     min-height: 66.5vh;
 }
 
-.item-showcase{
+/* loading */
+#loader {
+    /* position: absolute; */
+    left: 43%;
+    margin: 15px auto;
+    width: 100px;
+    height: 100px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    animation: loading 1500ms linear infinite;
+}
+
+#loader-inner {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(-3px, -3px);
+}
+
+#loading {
+    display: block;
+    text-align: center;
+    position: relative;
+    bottom: 75px;
+    font-family: "Poppins";
+    font-weight: 600;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.item-showcase {
     margin: 2.4rem 1.6rem;
 }
 
-.explore-heading{
-    margin-left: 1.5rem;
+.explore-heading {
+    /* margin-left: 1.5rem; */
     font-size: 1.8rem;
     position: relative;
 }
-.explore-heading > span::before{
+
+.explore-heading>span::before {
     content: "";
     height: 0.28rem;
     width: 12rem;
@@ -24,7 +64,7 @@
     right: 0;
 }
 
-.product-collection{
+.product-collection {
     margin: 0.8rem 0;
     /* display: flex;
     flex-direction: row;
@@ -32,11 +72,11 @@
     justify-content: flex-start;
     flex-wrap: wrap; */
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(14.4rem,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(14.4rem, 1fr));
     gap: 16px 8px;
 }
 
-.grocery-card{
+.grocery-card {
     padding: 1.2rem;
     display: flex;
     flex-direction: column;
@@ -47,37 +87,39 @@
     transition: all 0.2s linear;
 }
 
-.item-details{
+.item-details {
     font-family: 'Nunito', sans-serif;
     cursor: default;
     width: 100%;
 }
 
-.item-image{
+.item-image {
     width: 12rem;
 }
-.item-image img{
+
+.item-image img {
     width: inherit;
     object-fit: contain;
     aspect-ratio: 1;
 }
 
-.item-name{
+.item-name {
     margin-top: 0.4rem;
     /* width: 12rem; */
     /* font-size: 0.9rem; */
-    min-height: 2.4rem;
-    max-height:2.4rem;
+    min-height: 2.7rem;
+    max-height: 2.7rem;
     text-align: left;
-    overflow:hidden;
-     text-overflow: ellipsis;
+    overflow: hidden;
+    text-overflow: ellipsis;
     transition: all 0.2s linear;
 }
-.item-name:hover{
+
+.item-name:hover {
     max-height: auto;
 }
 
-.stock-and-price{
+.stock-and-price {
     margin: 0.64rem 0;
     display: flex;
     flex-direction: row;
@@ -85,18 +127,18 @@
     justify-content: space-between;
 }
 
-.stock-remaining{
+.stock-remaining {
     padding: 0 0.24rem;
     color: var(--stock-color);
     border-radius: 0.16rem;
 }
 
-.explore-message{
+.explore-message {
     margin: 3rem 0;
 }
 
 /* extra block */
-.extra-block{
+.extra-block {
     flex-grow: 1;
-    margin-left:auto;
+    margin-left: auto;
 }

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { base_url  } from './config'
+import { base_url } from './config'
 import { getProductLoading, getProductSuccess, getProductFailure } from './ActionCreators'
 import { registerApiLoading, registerApiSuccess, registerApiFailure } from './ActionCreators'
 import { loginApiLoading, loginApiSuccess, loginApiFailure } from './ActionCreators'
@@ -8,7 +8,7 @@ import { getCartLoading, getCartSuccess, getCartFailure } from './ActionCreators
 
 // Product Actions
 export const getAllProducts = (data) => {
-    return (dispatch) => {
+    return async (dispatch) => {
         dispatch(getProductLoading())
         axios.get(base_url + '/admin/get-products', data).then((res) => {
             dispatch(getProductSuccess(res.data))
@@ -20,7 +20,7 @@ export const getAllProducts = (data) => {
 
 // Register Actions
 export const registerAction = (data) => {
-    return(dispatch) => {
+    return (dispatch) => {
         dispatch(registerApiLoading())
         axios.post(base_url + '/user/register', data).then((res) => {
             dispatch(registerApiSuccess(res.data))
@@ -58,7 +58,7 @@ export const addToCart = (data) => {
 export const getCartItems = (uid) => {
     return (dispatch) => {
         dispatch(getCartLoading())
-        axios.get(base_url + '/user/get-cart-items', {params: {u_id: uid}}).then((res) => {
+        axios.get(base_url + '/user/get-cart-items', { params: { u_id: uid } }).then((res) => {
             dispatch(getCartSuccess(res.data))
         }).catch((err) => {
             dispatch(getCartFailure(err.response.data))

@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./PlaceOrder.css";
 
 import { useSelector } from "react-redux";
@@ -39,6 +39,10 @@ function PlaceOrder() {
         localStorage.setItem('deliverySlot', JSON.stringify(selectedSlot))
         navigate("/payment")
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    })
 
     return (
         <div className="order-component">

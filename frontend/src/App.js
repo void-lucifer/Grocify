@@ -4,6 +4,7 @@ import store from './Store/Store'
 import { Provider } from 'react-redux'
 import './responsive.css'
 import "@stripe/stripe-js"
+import { ToastContainer } from 'react-toastify'
 
 function App() {
 
@@ -15,6 +16,14 @@ function App() {
     <>
       <Provider store={store}>
         <Routing />
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
+          // hideProgressBar
+          newestOnTop
+          closeOnClick
+          draggable
+          pauseOnHover={true} />
       </Provider>
     </>
   );
